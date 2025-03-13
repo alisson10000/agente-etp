@@ -1,5 +1,7 @@
 🧠 Agente ETP - Gerador Inteligente de Estudo Técnico Preliminar (ETP)
+
 ✨ Descrição
+
 O Agente ETP é um agente inteligente desenvolvido em FastAPI com o objetivo de automatizar a criação de Estudos Técnicos Preliminares (ETP) de forma rápida, inteligente e personalizada. Voltado para o setor público (como Câmaras Municipais), o agente é capaz de analisar dados e gerar textos completos para os principais itens exigidos em um ETP, seguindo a Lei 14.133/2021 (Nova Lei de Licitações).
 
 🚀 Tecnologias Utilizadas
