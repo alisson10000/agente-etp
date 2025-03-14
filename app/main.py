@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from app.core.database import engine, Base
 from app.modules.usuario.router_usuario import router as usuario_router
+from app.modules.etp.router_etp import router as etp_router
 
 # ================================
 # Criação da instância do FastAPI
@@ -33,6 +34,8 @@ Base.metadata.create_all(bind=engine)
 # Inclusão das rotas dos módulos
 # =====================================
 app.include_router(usuario_router)  # ✅ Inclui o router corretamente sem prefixo repetido
+
+app.include_router(etp_router)  # Pronto, vai adicionar as rotas de ETP
 
 # =====================================
 # Rota raiz (saúde do servidor)

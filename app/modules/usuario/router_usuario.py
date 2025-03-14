@@ -39,9 +39,10 @@ def atualizar(usuario_id: int, usuario_update: UsuarioUpdate, db: Session = Depe
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     return usuario
 
-@router.delete("/{usuario_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{usuario_id}", status_code=status.HTTP_200_OK)
 def deletar(usuario_id: int, db: Session = Depends(get_db)):
     usuario = deletar_usuario(db, usuario_id)
     if usuario is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
-    return None  # No content
+    return {"message": "Usuário deletado com sucesso!", "usuario_id": usuario_id}
+
